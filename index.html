@@ -1,0 +1,444 @@
+
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Hassan Musa Abdurrahman</title>
+  
+  <style>
+  :root {
+   --primary: #2FA084;      
+   --primary-dark: #2FA084; 
+   --bg: #EEEEEE;           
+   --bg-card: #1F6F5F;      
+   --text: #1F6F5F;         
+   --text-muted: #2E8B57;   
+   --border: #6FCF97;       
+   --radius: 50px;          
+   --shadow: 0 4px 20px rgba(0,0,0,0.3);}
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior:smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #EEEEEE, #DDDDDD);            color: var(--text);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        nav {
+            background: var(--bg-card);
+            border-bottom: 1px solid var(--border);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+        }
+
+        nav .nav-container {
+            max-width: 1100px;
+            margin:auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #2FA084;
+            text-decoration: none;
+        }
+
+        nav .nav-links {
+            display: flex;
+            gap: 1.5rem;
+            list-style: none;
+        }
+
+        nav .nav-links a {
+            color: #6FCF97;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-weight: 500;
+        }
+
+        nav .nav-links a:hover {
+            color: #2FA084;
+            
+        }
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text);
+            font-size: 1.5rem;
+            cursor: pointer;
+          
+        }
+        .hero {
+            max-width: 1100px;
+            margin:auto;
+            padding: 5rem 2rem;
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            min-height: 80vh;
+        }
+        
+        .hero-text h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-text h1 .highlight {
+            color: var(--primary);
+        }
+
+        .hero-text .subtitle {
+            font-size: 1.3rem;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-text p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            max-width: 500px;
+            margin-bottom: 2rem;
+        }
+        
+    .buttons{
+      display:flex;
+      gap:1rem;
+      flex-wrap:wrap;
+    }
+    
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: var(--radius);
+            font-weight: 600;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 0 50px rgba(0, 255, 128, 0.3);
+        }
+
+        .btn-primary {
+            background: white;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            margin-left: 1rem;
+        }
+
+        .btn-primary:hover {
+            background: var(--primary);
+            color:White;
+        }
+        
+            .btn-outline{
+      border:2px solid var(--primary);
+      color:var(--primary);
+      background:white;
+    }
+
+    .btn-outline:hover{
+      background:var(--primary);
+      color:white;
+    }
+
+        .hero-avatar {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #2FA084, #90EE90);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
+            flex-shrink: 0;
+            box-shadow: 0 0 60px rgba(0, 255, 128, 0.3);
+        }
+        .hero-avatar img{
+          width:95%;
+          height:95%;
+          border-radius:50%;
+        }
+        
+    section{
+      max-width:1000px;
+      margin:auto;
+      padding:5rem 2rem;
+    }
+
+    section h2{
+      font-size:2.3rem;
+      margin-bottom:2rem;
+      color:var(--primary);
+    }
+
+    .card{
+      background:white;
+      border:1px solid var(--border);
+      padding:2rem;
+      border-radius:var(--radius);
+      margin-bottom:2rem;
+      backdrop-filter:blur(10px);
+      box-shadow:white;
+    }
+    .education-item{
+      margin-bottom:1.5rem;
+    }
+
+    .education-item h3{
+      color:var(--text);
+    }
+
+    .education-item p{
+      color:var(--muted);
+    }
+
+    .hobby-container{
+      display:flex;
+      gap:1rem;
+      flex-wrap:wrap;
+    }
+
+    .hobby{
+      background:white;
+      border:1px solid var(--border);
+      padding:1rem 1.5rem;
+      border-radius:14px;
+      transition:0.3s;
+      box-shadow:0 5px 15px rgba(14,165,233,0.06);
+    }
+
+    .hobby:hover{
+      transform:translateY(-5px);
+      brder-color:var(--primary);
+      box-shadow:0 10px 25px rgba(14,165,233,0.15);
+    }
+
+    .achievement{
+      margin-bottom:1rem;
+      padding:1rem;
+      background:#EEEEEE;
+      border-left:5px solid var(--primary);
+      border-radius:10px;
+    }
+
+    .contact-item {
+      margin-bottom:1rem;
+      font-size:1.05rem;
+      color:var(--muted);
+    }
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border);
+            margin-top: 4rem;
+        }
+        
+<--!📱 RESPONSIVE DESIGN — Mobile friendly!-->
+
+    @media(max-width:900px){
+
+      .hero{
+        flex-direction:column-reverse;
+        text-align:center;
+        padding-top:4rem;
+      }
+
+      .hero-image img{
+        width:260px;
+        height:260px;
+      }
+
+      .hero-text h1{
+        font-size:2.4rem;
+      }
+
+      .buttons{
+        justify-content:center;
+      }
+
+      .nav-links{
+        display:none;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+    <!--🧭 NAVIGATION -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">🌵 My Portfolio</div>
+          
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about">Tentang</a></li>
+                <li><a href="#education">Pendidikan</a></li>
+                <li><a href="#hobbies">Hobi</a></li>
+                <li><a href="#achievement">Prestasi</a></li>
+                <li><a href="#contact">Kontak</a></li>
+            </ul>
+        </div>
+    </nav>
+
+ <!--🦸 HERO -->
+    <section class="hero">
+      
+        <div class="hero-text">
+            <h1>Hallo, Nama Saya <span class="highlight">Hassan Musa Abdurrahman</span></h1>
+            <p class="subtitle">Pelajar dari sekolah SMA Wardaya </p>
+            <p>
+                Saya adalah pelajar dari SMA Wardaya.
+                yang memiliki kepribadian yang aktif, seru, dan baik. 
+                saya memiliki hobby seperti suka olahraga, bermain games, menggambar, dan memasak.
+            </p>
+            <div>
+                <a href="#about" class="btn">Lihat Profil</a>
+                <a href="#contact" class="btn btn-outline">Hubungi Saya</a>
+            </div>
+        </div>
+        <div class="hero-avatar">
+          
+          <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQk-wx94vofGNtI7ouLTcu7bh9HuCU5SOhQtQ&s"/>
+        </div>
+    </section>
+
+    <!--👤 ABOUT-->
+    <section id="about">
+        <h2>Tentang Saya</h2>
+            <div class="card">
+                <p>
+                    Nama saya adalah Hassan Musa Abdurrahman. Saya lahir pada tanggal 5 Mei 2009 di Jakarta. 
+                    Rumah saya ada di cipinang baru bunder Pulo Gadung. 
+                    Saat ini saya kelas 10 di SMA Wardaya.
+                </p>
+                <br>
+                <p>
+                    Saya suka melakukan berbagai macam kegiatan yang bisa membantu saya untuk berkembang
+                    dalam bidang akademik maupun non-akademik. Saya orang nya gampang berinteraksi dengan orang 
+                    lain. Saya sangat suka bermain games, bermain sepak bola, menggambar dan memasak.
+                </p>
+              </div>
+            </section>
+  
+   <!-- EDUCATION -->
+  <section id="education">
+    <h2>Pendidikan Saya</h2>
+
+    <div class="card">
+
+      <div class="education-item">
+        <h3>SD Cipinang 01 </h3>
+        <p>2016 - 2022</p>
+      </div>
+
+      <div class="education-item">
+        <h3>SMP Labschool Jakarta</h3>
+        <p>2022 - 2025</p>
+      </div>
+
+      <div class="education-item">
+        <h3>SMA Wardaya</h3>
+        <p>2025 - 2028</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- HOBBIES -->
+  <section id="hobbies">
+    <h2>Hobi Saya</h2>
+
+    <div class="hobby-container">
+
+      <div class="hobby">
+       🎮 Bermain Games
+      </div>
+
+      <div class="hobby">
+       ⚽ Bermain Sepak Bola
+      </div>
+
+      <div class="hobby">
+        🎨 Menggambar
+      </div>
+
+      <div class="hobby">
+        🍳 Memasak
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ACHIEVEMENT -->
+  <section id="achievement">
+    <h2>Prestasi Saya</h2>
+
+    <div class="card">
+
+      <div class="achievement">
+        🥇 Medali Gold Lomba Riset i2Aspo di Universitas Gadjah Mada
+      </div>
+
+      <div class="achievement">
+        🥇 Medali Gold Lomba Riset GYIIF di Insitut Pertanian Bogor (iPB)
+      </div>
+
+      <div class="achievement">
+        🥈 Medali Silver Lomba Riset JISF di International Institute for Life-Sciences (i3L)
+      </div>
+
+    </div>
+  </section>
+
+    <!--📬 CONTACT-->
+  <section id="contact">
+    <h2>Kontak Saya</h2>
+
+    <div class="card">
+
+      <div class="contact-item">
+        📞 +62 813-8680-8667
+      </div>
+
+      <div class="contact-item">
+        ✉️ Hassan.musa.abdurrahman
+      </div>
+
+      <div class="contact-item">
+        📍 Jl. Bunder No.2, RT.8/RW.1, Cipinang, Kec Pulo Gadung
+      </div>
+
+    </div>
+  </section>
+  
+    <!--📄 FOOTER -->
+     <footer>
+    © 2026 Hassan Musa Abdurrahman | Built with HTML & CSS
+  </footer>
+
+</body>
+</html>
